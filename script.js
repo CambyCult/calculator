@@ -19,8 +19,8 @@ class Calculator {
     }
 
     appendNumber(number) {
-        if (number === '.' && this.currentOperand.includes('.'))
-        return ( this.currentOperand = this.currentOperand.toString() + number.toString())
+        if (number === '.' && this.currentOperand.includes('.'))return 
+         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
@@ -90,15 +90,26 @@ getDisplayNumber(number) {
   }
 }
 
+
+
+document.getElementById("skynet").onclick = function() {
+    document.getElementById("cyberdine").style.visibility = "visible";
+    document.body.style.backgroundImage = "url(images/skynet.jpg)";
+}
+
+
+
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
-const equalsButtons = document.querySelector('[data-equals]')
-const deleteButton = document.querySelector('data-delete]')
+const equalsButton = document.querySelector('[data-equals]')
+const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
+const skynetButton = document.querySelector('[skynet-activate]')
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -114,7 +125,7 @@ operationButtons.forEach(button => {
     })
 })
 
-equalsButtons.addEventListener('click', button => {
+equalsButton.addEventListener('click', button => {
     calculator.compute()
     calculator.updateDisplay()
 })
@@ -130,6 +141,6 @@ allClearButton.addEventListener('click', button => {
 })
 
 
-  
-    
+
+   
 

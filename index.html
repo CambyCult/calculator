@@ -5,28 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
-<body>
 
+<body>
+    <terminator>
+    </terminator>
+
+    <!--/* This is the grey box that holds the screen and buttons*/-->
     <div class="container">
-        <h1>Calculator     _______________ ti-2 1/2</h1>
+        <h1>Calculator     ________ ti-2 1/2</h1>
         <div class="screen">
-            <div class="calculator">
-CALCULATOR CLASS
-            </div>
+
+            <div id ="cyberdine" class="cyberdine" ></div>
+
             <div data-previous-operand class="previous-operand"></div>
                 <div data-current-operand class="current-operand"></div>
-       
-                </div>
+            
+        </div>
                
         <div class="buttons">
         
-
-            <button id="clear" type="button" data-all-clear>CLR</button>
-            <button id="delete" type="button" data-delete>DEL</button>
-            <button id="percent" type="button"></button>
+            <div class="span-two">
+            <button id="skynet" type="button" skynet-activate>Do Not Press</button>
+            </div>
+            <button href="index.html">🔙</button>
             <button id="divide" type="button" data-operation>/</button>
 
             <button id="seven" type="button" data-number>7</button>
@@ -44,18 +48,19 @@ CALCULATOR CLASS
             <button id="three" type="button" data-number>3</button>
             <button id="add" type="button" data-operation>+</button>
 
-            <button id="negative" type="button"></button>
+            <button id="clear" type="button" data-all-clear>CLR</button>
             <button id="zero" type="button" data-number>0</button>
-            <button id="decimal" type="button" data-operation>.</button>
+            <button id="delete" type="button" data-delete>DEL</button>
             <button id="sum" type="button" data-equals>=</button>
 
-            <div class="output">
-                
-            </div>
+           
        
         </div>
     
     </div>
     
+    <div class="footer">
+        <p>Copyright ©2021 CambyCult</p>
+    </div>
 </body>
 </html>
